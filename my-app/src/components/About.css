@@ -226,12 +226,23 @@
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+.members{
+  width: 100%;
+  display: flex;
+  gap: 55px
+}
 
+.lastmember{
+  height: 100%;
+}
 @media (max-width: 768px) {
   .section-title1 {
     position: relative;
     text-align: center;
     font-size: 2rem;
+  }
+  .members{
+    display: grid;
   }
 
   .section-title1::after {
