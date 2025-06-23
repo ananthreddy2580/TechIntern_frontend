@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+
   "dependencies": {
     "axios": "^1.10.0",
     "imagekitio-react": "^4.3.0",
+    "puppeteer": "^24.10.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",
