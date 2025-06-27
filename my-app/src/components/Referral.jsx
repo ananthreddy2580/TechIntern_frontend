@@ -7,7 +7,6 @@ import { useToggleStore } from "./store";
 import axios from "axios";
 const API_URL = import.meta.env.VITE_API_URL;
 
-
 const Referral = () => {
   // const [options, setOptions] = useState({
   //   ananath: "TECH00001REF",
@@ -18,6 +17,7 @@ const Referral = () => {
   const [selectedCode, setSelectedCode] = useState("");
   const [referralCode, setReferralCode] = useState("TECH2024REF");
   const [copied, setCopied] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   // console.log(options);
@@ -39,9 +39,25 @@ const Referral = () => {
   }, []);
 
   const copyReferralCode = () => {
-    navigator.clipboard.writeText(selectedCode);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    // navigator.clipboard.writeText(selectedCode);
+    // setCopied(true);
+    // setTimeout(() => setCopied(false), 2000);
+    setIsLoading(true);
+
+    setTimeout(() => {
+      navigator.clipboard
+        .writeText(selectedCode)
+        .then(() => {
+          setIsLoading(false);
+          setCopied(true);
+
+          setTimeout(() => setCopied(false), 1000); // Clear "Copied!" after 2 sec
+        })
+        .catch((err) => {
+          console.error("Copy failed:", err);
+          setIsLoading(false);
+        });
+    }, 100); // Small delay to improve mobile performance
   };
 
   const leaderboardData = [
