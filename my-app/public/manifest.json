@@ -1,0 +1,26 @@
+{
+  "name": "TechIntern",
+  "short_name": "TechIntern",
+  "description": "Python Full Stack Internship with real-world projects, mentorship, and ₹500 referral rewards.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/logo12.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo12.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo12.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
