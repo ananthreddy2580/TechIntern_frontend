@@ -14,10 +14,24 @@ import Apply from "./components/Apply";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingContact from "./components/FloatingContact";
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <title>
+          TechIntern – IT Training for Freshers with Projects & Mentorship
+        </title>
+        <meta
+          name="description"
+          content="Join TechIntern to learn Python, Web Development, and more with expert mentors, real-world projects, and job interview preparation."
+        />
+        <meta
+          name="keywords"
+          content="TechIntern, IT training, coding courses, freshers, job ready, mentorship, project-based learning"
+        />
+      </Helmet>
       <Header />
       <Hero />
       <About />

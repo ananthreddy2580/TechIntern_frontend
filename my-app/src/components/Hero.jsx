@@ -42,16 +42,20 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
+            {/* ✅ Main Heading */}
             <h1 className="hero-title">
               {typedText}
               <span className="cursor">|</span>
             </h1>
+
+            {/* ✅ Descriptive Subheading */}
             <p className="hero-subtitle fade-in">
               Join our Python Full Stack internship program and work on 3
               real-world projects. Get certified and earn ₹500 for every
               referral!
             </p>
 
+            {/* ✅ Visual Stats */}
             <div className="hero-stats fade-in">
               <div className="stat">
                 <span className="stat-number">100+</span>
@@ -67,6 +71,7 @@ const Hero = () => {
               </div>
             </div>
 
+            {/* ✅ CTA Buttons */}
             <div className="hero-actions fade-in">
               <button
                 className="btn btn-primary btn-large"
@@ -83,6 +88,7 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* ✅ Optional Image (add alt if image is used here) */}
           <div className="hero-visual">
             <div className="code-animation">
               <div className="code-line">
